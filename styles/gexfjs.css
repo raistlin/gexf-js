@@ -4,17 +4,20 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif; font-size: 12px;
-    background-color: #e0e0e8; color: #204020; margin: 0;
+/*    background-color: #e0e080; color: #204020; margin: 0;*/
+    background-color: #cfb590; color: #204020; margin: 0;
 }
 
 .clear {
     clear: both;
 }
 
+/*
 .gradient {
     background-color: #f0f0f8; 
     background-image: -webkit-radial-gradient(#ffffff, #d8d8e0); background-image: -moz-radial-gradient(#ffffff, #d8d8e0);
 }
+*/
 
 /* EN HAUT */
 

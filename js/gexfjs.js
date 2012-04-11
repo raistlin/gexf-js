@@ -138,10 +138,14 @@ function displayNode(_nodeIndex, _recentre) {
                 });
             });
         _str += '<h3><div class="largepill" style="background: ' + _d.color.base +'"></div>' + _d.label + '</h3>';
-        _str += '<h4>' + strLang("nodeAttr") + '</h4>';
-        _str += '<ul><li><b>id</b> : ' + _d.id + '</li>';
+        //_str += '<h4>' + strLang("nodeAttr") + '</h4>';
+        //_str += '<ul><li><b>id</b> : ' + _d.id + '</li>';
         for (var i in _d.attributes) {
-            _str += '<li><b>' + strLang(i) + '</b> : ' + _d.attributes[i] + '</li>';
+			if (_d.attributes[i].indexOf("http") != -1) {
+				_str += '<li><b>' + strLang(i) + '</b> : <a href="'+ _d.attributes[i] + '" target="_blank">Acceder a Web</a></li>';
+			} else {
+	            // _str += '<li><b>' + strLang(i) + '</b> : ' + _d.attributes[i] + '</li>';
+			}
         }
         _str += '</ul><h4>' + ( GexfJS.graph.directed ? strLang("inLinks") : strLang("undirLinks") ) + '</h4><ul>';
         for (var i in GexfJS.graph.edgeList) {
